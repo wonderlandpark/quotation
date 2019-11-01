@@ -1,0 +1,39 @@
+{
+  "name": "Quotation",
+  "version": "1.0.0",
+  "description": "Changes some Characters to Code Friendly",
+  "homepage_url": "https://dev.wonderbot.xyz",
+  "offline_enabled": true,
+  "permissions": [
+    "http://*/*", "https://*/*", "tabs", "storage"
+  ],
+  "browser_action": {
+    "default_title": "Quotation",
+    "default_popup": "views/popup.html",
+    "default_icon": {
+      "16": "images/16.png",
+      "32": "images/32.png",
+      "48": "images/48.png",
+      "128": "images/128.png"
+    }
+  },
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "scripts/index.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
